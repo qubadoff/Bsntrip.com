@@ -2,7 +2,6 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\Admin\AdminCheckMiddleware;
 use App\Http\Middleware\SetLocaleMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -67,6 +66,5 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'setLocale' => SetLocaleMiddleware::class,
-        'checkAdmin' => AdminCheckMiddleware::class,
     ];
 }
